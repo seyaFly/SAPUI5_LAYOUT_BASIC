@@ -1,0 +1,20 @@
+<mvc:View
+	xmlns:forms="sap.ui.layout.form"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0"
+>
+	<forms:SimpleForm
+		editable="false"
+		layout="ColumnLayout"
+	>
+		<Label text="Evangelize the UI framework across the company"/>
+		<Text text="4 days overdue Cascaded"/>
+		<Label text="Get trained in development management direction"/>
+		<Text text="Due Nov 21"/>
+		<Label text="Mentor junior developers"/>
+		<Text text="Due Dec 31 Cascaded"/>
+	</forms:SimpleForm>
+</mvc:View>

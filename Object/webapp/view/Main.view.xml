@@ -1,0 +1,99 @@
+<mvc:View
+	controllerName="onem.seya.ui5layout.object.controller.Main"
+	displayBlock="true"
+	xmlns="sap.m"
+	xmlns:goals="onem.seya.ui5layout.object.view.blocks.goals"
+	xmlns:personal="onem.seya.ui5layout.object.view.blocks.personal"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:uxap="sap.uxap"
+>
+	<App id="idApp">
+		<uxap:ObjectPageLayout
+			showTitleInHeaderContent="true"
+			useIconTabBar="true"
+			upperCaseAnchorBar="false"
+		>
+			<uxap:headerTitle>
+				<uxap:ObjectPageDynamicHeaderTitle>
+					<uxap:expandedHeading>
+						<Title
+							text="Denise Smith"
+							wrapping="true"
+						/>
+					</uxap:expandedHeading>
+					<uxap:snappedHeading>
+						<core:Fragment
+							type="XML"
+							fragmentName="onem.seya.ui5layout.object.fragment.snappedHeading"
+						/>
+					</uxap:snappedHeading>
+					<uxap:expandedContent>
+						<Text text="Senior UI Developer"/>
+					</uxap:expandedContent>
+					<uxap:snappedContent>
+						<Text text="Senior UI Developer"/>
+					</uxap:snappedContent>
+					<!-- action button-->
+					<uxap:actions>
+						<Button
+							text="Edit"
+							type="Emphasized"
+						/>
+						<Button
+							type="Transparent"
+							text="Delete"
+						/>
+						<Button
+							type="Transparent"
+							text="Copy"
+						/>
+						<OverflowToolbarButton
+							icon="sap-icon://action"
+							type="Transparent"
+							text="Share"
+							tooltip="action"
+						/>
+					</uxap:actions>
+				</uxap:ObjectPageDynamicHeaderTitle>
+			</uxap:headerTitle>
+			<uxap:headerContent>
+				<core:Fragment
+					type="XML"
+					fragmentName="onem.seya.ui5layout.object.fragment.HeaderContent"
+				/>
+			</uxap:headerContent>
+			<uxap:sections>
+				<!--sap.uxap.ObjectPageSection-->
+				<uxap:ObjectPageSection
+					titleUppercase="false"
+					title="Goal"
+				>
+					<uxap:ObjectPageSubSection titleUppercase="false">
+						<uxap:blocks>
+							<!---->
+							<goals:GoalBlock id="goalsblock"/>
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:ObjectPageSection>
+				<uxap:ObjectPageSection
+					titleUppercase="false"
+					title="Connect"
+				>
+					<uxap:ObjectPageSubSection titleUppercase="false">
+						<uxap:blocks>
+							<!---->
+							<personal:BlockPhoneNumber id="phone"/>
+							<personal:BlockSocial id="social"/>
+							<personal:BlockAdresses id="adresses"/>
+							<personal:BlockMailing
+								id="mailing"
+								columnLayout="1"
+							/>
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:ObjectPageSection>
+			</uxap:sections>
+		</uxap:ObjectPageLayout>
+	</App>
+</mvc:View>

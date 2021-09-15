@@ -1,0 +1,144 @@
+<mvc:View
+	controllerName="onem.seya.ui5layout.tnt.controller.Main"
+	displayBlock="true"
+	xmlns="sap.m"
+	xmlns:tnt="sap.tnt"
+	xmlns:mvc="sap.ui.core.mvc"
+>
+	<tnt:ToolPage id="App">
+		<tnt:header>
+			<tnt:ToolHeader>
+				<tnt:content>
+					<Button
+						id="sideNavigationToggleButton"
+						icon="sap-icon://menu2"
+						type="Transparent"
+						press="onSideNavButtonPress"
+					>
+						<layoutData>
+							<OverflowToolbarLayoutData priority="NeverOverflow"/>
+						</layoutData>
+					</Button>
+					<ToolbarSpacer width="20px"/>
+				</tnt:content>
+				<ToolbarSpacer width="20px"/>
+				<Button
+					text="File"
+					type="Transparent"
+				>
+					<layoutData>
+						<OverflowToolbarLayoutData priority="Low"/>
+					</layoutData>
+				</Button>
+				<Button
+					text="Edit"
+					type="Transparent"
+				>
+					<layoutData>
+						<OverflowToolbarLayoutData priority="Low"/>
+					</layoutData>
+				</Button>
+				<Button
+					text="View"
+					type="Transparent"
+				>
+					<layoutData>
+						<OverflowToolbarLayoutData priority="Low"/>
+					</layoutData>
+				</Button>
+				<Button
+					text="Navigate"
+					type="Transparent"
+				>
+					<layoutData>
+						<OverflowToolbarLayoutData priority="Low"/>
+					</layoutData>
+				</Button>
+				<Button
+					text="Code"
+					type="Transparent"
+				>
+					<layoutData>
+						<OverflowToolbarLayoutData priority="Low"/>
+					</layoutData>
+				</Button>
+				<Button
+					text="Refactor"
+					type="Transparent"
+				>
+					<layoutData>
+						<OverflowToolbarLayoutData priority="Low"/>
+					</layoutData>
+				</Button>
+				<Button
+					text="Run"
+					type="Transparent"
+				>
+					<layoutData>
+						<OverflowToolbarLayoutData priority="Low"/>
+					</layoutData>
+				</Button>
+				<Button
+					text="Tools"
+					type="Transparent"
+				>
+					<layoutData>
+						<OverflowToolbarLayoutData priority="Low"/>
+					</layoutData>
+				</Button>
+				<tnt:ToolHeaderUtilitySeparator/>
+				<ToolbarSpacer>
+					<layoutData>
+						<OverflowToolbarLayoutData
+							priority="NeverOverflow"
+							minWidth="20px"
+						/>
+					</layoutData>
+				</ToolbarSpacer>
+				<Button
+					text="Alan Smith"
+					type="Transparent"
+				>
+					<layoutData>
+						<OverflowToolbarLayoutData priority="NeverOverflow"/>
+					</layoutData>
+				</Button>
+			</tnt:ToolHeader>
+		</tnt:header>
+		<tnt:sideContent>
+			<tnt:SideNavigation>
+				<tnt:NavigationList
+					expanded="true"
+					selectedKey="{side>/selectedKey}"
+					items="{
+						path: 'side>/navigation',
+						templateShareable: false
+					}"
+				>
+					<tnt:items>
+						<tnt:NavigationListItem
+							text="{path: 'side>titleI18nKey', formatter: '.getBundleText'}"
+							icon="{side>icon}"
+							expanded="{side>expanded}"
+							items="{
+							path: 'side>items',
+							templateShareable: false
+						}"
+							key="{side>key}"
+							href="#/{side>key}"
+						>
+							<tnt:NavigationListItem
+								text="{path: 'side>titleI18nKey', formatter: '.getBundleText'}"
+								key="{side>key}"
+								href="#/{side>key}"
+							/>
+						</tnt:NavigationListItem>
+					</tnt:items>
+				</tnt:NavigationList>
+			</tnt:SideNavigation>
+		</tnt:sideContent>
+		<tnt:mainContents>
+			<App id="idApp"/>
+		</tnt:mainContents>
+	</tnt:ToolPage>
+</mvc:View>

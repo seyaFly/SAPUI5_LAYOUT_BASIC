@@ -1,0 +1,20 @@
+<c:FragmentDefinition
+	xmlns:m="sap.m"
+	xmlns:c="sap.ui.core"
+>
+	<m:FlexBox
+		fitContainer="true"
+		alignItems="Center"
+	>
+		<m:VBox>
+			<m:Avatar
+				src="../img/imageID_275314.png"
+				class="sapUiTinyMarginEnd"
+			/>
+			<m:Title
+				text="Denise Smith"
+				wrapping="true"
+			/>
+		</m:VBox>
+	</m:FlexBox>
+</c:FragmentDefinition>

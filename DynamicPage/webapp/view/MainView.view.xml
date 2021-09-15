@@ -1,0 +1,17 @@
+<mvc:View
+	xmlns:f="sap.f"
+	controllerName="onem.seya.ui5layout.dynamicPage.controller.MainView"
+	displayBlock="true"
+	height="100%"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+>
+	<App id="dynamicApp">
+		<f:FlexibleColumnLayout
+			id="idAppControl"
+			stateChange=".onStateChanged"
+			backgroundDesign="Solid"
+			layout="{/layout}"
+		/>
+	</App>
+</mvc:View>

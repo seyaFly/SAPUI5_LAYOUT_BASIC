@@ -1,0 +1,40 @@
+<c:FragmentDefinition
+	xmlns:layout="sap.ui.layout"
+	xmlns:m="sap.m"
+	xmlns:c="sap.ui.core"
+>
+	<m:FlexBox
+		wrap="Wrap"
+		fitContainer="true"
+	>
+		<m:Avatar
+			class="sapUiSmallMarginEnd"
+			src="../img/imageID_275314.png"
+			displaySize="L"
+		/>
+		<layout:VerticalLayout class="sapUiSmallMarginBeginEnd">
+			<m:Link text="+33 6 4512 5158"/>
+			<m:Link text="DeniseSmith@sap.com"/>
+		</layout:VerticalLayout>
+		<layout:HorizontalLayout class="sapUiSmallMarginBeginEnd">
+			<m:Image src="../img/linkedin.png"/>
+			<m:Image
+				src="../img/Twitter.png"
+				class="sapUiSmallMarginBegin"
+			/>
+		</layout:HorizontalLayout>
+		<layout:VerticalLayout class="sapUiSmallMarginBeginEnd">
+			<m:Label text="Hello! I am Denise and I use UxAP"/>
+			<m:VBox>
+				<m:Label text="Achieved goals"/>
+				<m:ProgressIndicator
+					percentValue="30"
+					displayValue="30%"
+				/>
+			</m:VBox>
+		</layout:VerticalLayout>
+		<layout:VerticalLayout class="sapUiSmallMarginBeginEnd">
+			<m:Label text="San Jose, USA"/>
+		</layout:VerticalLayout>
+	</m:FlexBox>
+</c:FragmentDefinition>
